@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <link type="text/css" href="" />
-    <script type="application/javascript" src="" ></script>
+    <script type="text/javascript" src="" ></script>
     <script type="text/javascript">
         window.onload=function(){
 
@@ -13,10 +13,17 @@
     </script>
 </head>
 <body>
+    <h1>templates</h1>
     <form role="form" action = "/loginIn" method="post">
         账号：<input type="text" id="name" name = "name"> <br>
         密码：<input type="password" id = "password" name = "password"> <br>
         <input type="submit" id = "login" value = "login">
     </form>
+    <!--
+        TODO    无法访问，static中的和templates中的不能直接访问
+                而且templates中存放的应该是动态页面，必须通过服务器的视图解析器才行
+    -->
+
+    <a href="success.html">click me plz</a>
 </body>
 </html>

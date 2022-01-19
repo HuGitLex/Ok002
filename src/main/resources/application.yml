@@ -1,10 +1,10 @@
 spring:
   datasource:
-    name: fine  #Êı¾İ¿âÃû
+    name: fine  #æ•°æ®åº“å
     url: jdbc:mysql://localhost:3306/fine #url
-    username: root  #ÓÃ»§Ãû
-    password: 123456  #ÃÜÂë
+    username: root  #ç”¨æˆ·å
+    password: 123456  #å¯†ç 
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
-  mapper-locations: classpath:mapper/*.xml  #ÅäÖÃÓ³ÉäÎÄ¼ş
-  type-aliases-package: com.okit.pojo #ÅäÖÃÊµÌåÀà
+  mapper-locations: classpath:mapper/*.xml  #é…ç½®æ˜ å°„æ–‡ä»¶
+  type-aliases-package: com.okit.pojo #é…ç½®å®ä½“ç±»

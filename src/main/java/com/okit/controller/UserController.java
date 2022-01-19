@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date:2022/1/18
  * @Description:
  */
-@RestController
+@RestController(value = "/user")
 @ResponseBody
-@RequestMapping("/user")
 public class UserController {
 
 
