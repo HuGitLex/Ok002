@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.okit.dao.UserMapper">
-
     <select id="getInfo" parameterType="String" resultType="com.okit.pojo.User">
         SELECT * FROM user WHERE name = #{name} AND password = #{password}
+    </select>
+    <select id="getList" parameterType="" resultType="" >
+        select * from user
     </select>
 
 </mapper>

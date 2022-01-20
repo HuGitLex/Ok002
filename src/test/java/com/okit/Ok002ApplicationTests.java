@@ -1,5 +1,7 @@
 package com.okit;
 
+import com.google.gson.Gson;
+import com.okit.pojo.Person;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +21,14 @@ class Ok002ApplicationTests {
             System.out.println(jedis.get("00" + i));
         }
         jedis.close();
+    }
+
+    @Test
+    public void testGson(){
+        Gson gson=new Gson();
+        Person person = gson.fromJson("{'name':'zhansan','age':1}", Person.class);
+        System.out.println(person);
+
     }
 
 }

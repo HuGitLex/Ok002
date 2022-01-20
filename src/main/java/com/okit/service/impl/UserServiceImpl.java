@@ -4,9 +4,9 @@ import com.okit.dao.UserMapper;
 import com.okit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 /**
  * @Author:TYZC
  * @Date:2022/1/18
@@ -15,8 +15,12 @@ import javax.annotation.Resource;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
-
+    @Override
+    @Transactional(propagation= Propagation.REQUIRED)
+    public void doIt() {
+        userMapper.getInfo("111","212");
+    }
 }
